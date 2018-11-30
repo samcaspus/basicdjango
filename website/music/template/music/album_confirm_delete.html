@@ -1,0 +1,6 @@
+<form action="{% url 'music:delete-album' album.id %}" method="POST">
+{% csrf_token %}
+<input type="hidden"  name="album_id" value="{{album.id}}" >
+<input type="submit">
+
+  </form>

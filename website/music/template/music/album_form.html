@@ -1,0 +1,9 @@
+
+
+
+<form action="{% url 'music:add-album' %}" method="POST">
+{% csrf_token %}
+{% include 'music/register.html' %}
+<input type="submit" value="submit" name="submit">
+
+  </form>

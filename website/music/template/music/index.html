@@ -1,0 +1,14 @@
+
+<h1>add content using this</h1>
+<a href="{% url 'music:add-album'%}"><button>Add content</button></a>
+
+{% if all_albums %}
+<ul>
+{% for album in all_albums %}
+<li><a href="/music/{{ album.id }}/"><button>{{album.album_title}}</button></a><a href="{%url 'music:update-album' album.id %}"><button>update</button></a><a href="{%url 'music:delete-album' album.id %}"><button>delete</button></a></li>
+{% endfor %}
+</ul>
+
+{% else %}
+<h1> not available </h1>
+{% endif %}
